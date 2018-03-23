@@ -1,0 +1,22 @@
+[
+    {
+        "date": "03/23/2018",
+        "numDoses": "2",
+        "administrationType": "Intermuscular Injection",
+        "drugType": "Methamphetamine",
+        "source": "IHRC",
+        "zip": "50324",
+        "latitude": "41.6038268",
+        "longitude": "-93.7105118"
+    },
+    {
+        "date": "03/15/2018",
+        "numDoses": "2",
+        "administrationType": "Intermuscular Injection",
+        "drugType": "Heroin",
+        "source": "Hospital",
+        "zip": "50324",
+        "latitude": "41.6038268",
+        "longitude": "-93.7105118"
+    }
+]
