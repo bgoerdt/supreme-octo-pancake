@@ -1,22 +1,191 @@
 [
     {
+        "latitude": "41.6038268",
+        "longitude": "-93.7105118",
         "date": "03/23/2018",
+        "drugType": "Methamphetamine",
         "numDoses": "2",
         "administrationType": "Intermuscular Injection",
-        "drugType": "Methamphetamine",
-        "source": "IHRC",
-        "zip": "50324",
-        "latitude": "41.6038268",
-        "longitude": "-93.7105118"
+        "source": "IHRC"
     },
     {
+        "latitude": "41.6038268",
+        "longitude": "-93.7105118",
         "date": "03/15/2018",
+        "drugType": "Heroin",
         "numDoses": "2",
         "administrationType": "Intermuscular Injection",
-        "drugType": "Heroin",
-        "source": "Hospital",
+        "source": "Hospital"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "34545",
+        "numDoses": "1",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
         "zip": "50324",
+        "numDoses": "0",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "50131",
+        "numDoses": "0",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "50131",
+        "numDoses": "1",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "50324",
+        "numDoses": "1",
+        "administrationType": "Nasal Spray",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Wednesday, March 21 2018",
+        "zip": "52240",
+        "numDoses": "5",
+        "administrationType": "Nasal Spray",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "52333",
+        "numDoses": "0",
+        "administrationType": "Nasal Spray",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "50622",
+        "numDoses": "04",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "50131",
+        "numDoses": "1",
+        "administrationType": "Intermuscular Injection",
+        "source": "Law Enforcement"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "52440",
+        "numDoses": "3",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "50131",
+        "numDoses": "1",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "50111",
+        "numDoses": "05",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Saturday, March 24 2018",
+        "zip": "52333",
+        "numDoses": "1",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "52333",
+        "numDoses": "5",
+        "administrationType": "Nasal Spray",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "",
+        "longitude": "",
+        "date": "Friday, March 23 2018",
+        "zip": "50310",
+        "numDoses": "0",
+        "administrationType": "Nasal Spray",
+        "source": "IHRC"
+    },
+    {
         "latitude": "41.6038268",
-        "longitude": "-93.7105118"
+        "longitude": "-93.7105118",
+        "date": "Friday, March 23 2018",
+        "zip": "50324",
+        "numDoses": "1",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "41.5530318",
+        "longitude": "-92.9675572",
+        "date": "Friday, March 23 2018",
+        "zip": "50232",
+        "numDoses": "3",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "41.632449",
+        "longitude": "-93.6724649",
+        "date": "Friday, March 23 2018",
+        "zip": "50310",
+        "numDoses": "1",
+        "administrationType": "Nasal Spray",
+        "source": "IHRC"
+    },
+    {
+        "latitude": "42.0528293",
+        "longitude": "-93.8655303",
+        "date": "Friday, March 23 2018",
+        "zip": "50036",
+        "numDoses": "1",
+        "administrationType": "Intermuscular Injection",
+        "source": "IHRC"
     }
 ]

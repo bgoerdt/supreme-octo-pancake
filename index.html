@@ -85,30 +85,39 @@
         }
       ];
 
-      var hoverInfo;
+      var hoverInfo, map;
 
       function getNaloxoneResults() {
         fetch('naloxone.json')
           .then(response => {
             return response.json();
         }).then((responseJson) => {
-          var naloxoneResults = transformNaloxoneResults(responseJson);
-          initMap(naloxoneResults);
+          var naloxoneZipCodeHash = transformResultsToZipCodeHash(responseJson);
+          initializeZipCodeMapData(naloxoneZipCodeHash);
         });
       }
 
-      function getColor(min, max, value) {
+      function getFentanylResults() {
+        fetch('fentanyl.json')
+        .then(response => {
+            return response.json();
+        }).then((responseJson) => {
+          initializeMarkerClusterData(responseJson);
+        });
+      }
+
+      function getHeatMapColor(min, max, value) {
         var lightness = (1 - (((value / (max - min)) * 0.5) + 0.3)) * 100;
 
         return 'hsl(0, 85%, ' + lightness + '%)';
       }
 
-      function transformNaloxoneResults(naloxoneResponse) {
-        return naloxoneResponse.reduce((acc, naloxoneResult) => {
-          if (acc[naloxoneResult.zip]) {
-            acc[naloxoneResult.zip].reports += 1;
+      function transformResultsToZipCodeHash(resultsResponse) {
+        return resultsResponse.reduce((acc, result) => {
+          if (acc[result.zip]) {
+            acc[result.zip].reports += 1;
           } else {
-            acc[naloxoneResult.zip] = {
+            acc[result.zip] = {
               reports: 1
             };
           }
@@ -117,15 +126,15 @@
         }, {});
       }
 
-      function getResultsRange(naloxoneResults) {
-        var firstResult = naloxoneResults[Object.keys(naloxoneResults)[0]];
+      function getResultsRange(zipCodeHash) {
+        var firstResult = zipCodeHash[Object.keys(zipCodeHash)[0]];
         var initialRange = {
           min: firstResult.reports,
           max: firstResult.reports
         };
 
-        return Object.keys(naloxoneResults).reduce((acc, key) => {
-          var result = naloxoneResults[key];
+        return Object.keys(zipCodeHash).reduce((acc, key) => {
+          var result = zipCodeHash[key];
           if (result.reports > acc.max){
             acc.max = result.reports;
           }
@@ -136,16 +145,8 @@
         }, initialRange);
       }
 
-      function initMap(naloxoneResults) {
-        var resultsRange = getResultsRange(naloxoneResults);
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: {lat: 42.007730, lng: -93.505678},
-          styles: mapStyles
-        });
-
-        map.data.loadGeoJson('ia_iowa_zip_codes_geo.min.json');
+      function initializeZipCodeMapData(zipCodeHash) {
+        var resultsRange = getResultsRange(zipCodeHash);
         
         map.data.setStyle(function(feature) {
           var styleOptions = {
@@ -155,25 +156,22 @@
           };
           
           var featureZip = feature.getProperty('ZCTA5CE10');
-          var result = naloxoneResults[featureZip];
+          var result = zipCodeHash[featureZip];
           if (result) {
             styleOptions.fillOpacity = 0.7;
-            styleOptions.fillColor = getColor(resultsRange.min, resultsRange.max, result.reports);
+            styleOptions.fillColor = getHeatMapColor(resultsRange.min, resultsRange.max, result.reports);
           }
 
           return styleOptions;
         });
         
-        // When the user hovers, tempt them to click by outlining the letters.
-        // Call revertStyle() to remove all overrides. This will use the style rules
-        // defined in the function passed to setStyle()
         map.data.addListener('mouseover', function(event) {
           map.data.revertStyle();
           map.data.overrideStyle(event.feature, {strokeWeight: 4});
 
           var featureZip = event.feature.getProperty('ZCTA5CE10');
 
-          var result = naloxoneResults[featureZip];
+          var result = zipCodeHash[featureZip];
           var reports = result ? result.reports : 0;
 
           hoverInfo = new google.maps.InfoWindow({
@@ -196,9 +194,36 @@
           }
         });
       }
+
+      function initializeMarkerClusterData(results) {
+        var markers = results.map(result => {
+          return new google.maps.Marker({
+            position: {lat: Number(result.latitude), lng: Number(result.longitude)},
+            label: result.zip
+          });
+        });
+
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'http://localhost:8080/images/m'});
+      }
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat: 42.007730, lng: -93.505678},
+          styles: mapStyles
+        });
+
+        map.data.loadGeoJson('ia_iowa_zip_codes_geo.min.json');
+
+        getNaloxoneResults();
+        getFentanylResults();
+      }
+    </script>
+    <script src="http://localhost:8080/markerclusterer.js">
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVwC8OSM9CqtXXQbEYM2tm43dIpdwQf7U&callback=getNaloxoneResults&libraries=geometry">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVwC8OSM9CqtXXQbEYM2tm43dIpdwQf7U&callback=initMap&libraries=geometry">
     </script>
   </body>
 </html>
