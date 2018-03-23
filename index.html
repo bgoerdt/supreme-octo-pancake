@@ -117,12 +117,27 @@
         }, {});
       }
 
-      function getResultsRange() {}
+      function getResultsRange(naloxoneResults) {
+        var firstResult = naloxoneResults[Object.keys(naloxoneResults)[0]];
+        var initialRange = {
+          min: firstResult.reports,
+          max: firstResult.reports
+        };
+
+        return Object.keys(naloxoneResults).reduce((acc, key) => {
+          var result = naloxoneResults[key];
+          if (result.reports > acc.max){
+            acc.max = result.reports;
+          }
+          if (result.reports < acc.min) {
+            acc.min = result.reports;
+          }
+          return acc;
+        }, initialRange);
+      }
 
       function initMap(naloxoneResults) {
-        var resultsMin = 0, resultsMax = 10;
-        
-        // TODO: compute results max and mins
+        var resultsRange = getResultsRange(naloxoneResults);
 
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 7,
@@ -143,7 +158,7 @@
           var result = naloxoneResults[featureZip];
           if (result) {
             styleOptions.fillOpacity = 0.7;
-            styleOptions.fillColor = getColor(resultsMin, resultsMax, result.reports);
+            styleOptions.fillColor = getColor(resultsRange.min, resultsRange.max, result.reports);
           }
 
           return styleOptions;
