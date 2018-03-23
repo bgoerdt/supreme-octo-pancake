@@ -1,0 +1,12 @@
+[
+    {
+        "date": "03/23/2018",
+        "zip": "50324",
+        "result": "Methamphetamine",
+        "beforeOrAfter": "After drug use",
+        "actions": "a:1:{i:0;s:44:\"i-used-the-same-amount-of-drugs-as-i-planned\";}",
+        "latitude": "41.6038268",
+        "longitude": "-93.7105118",
+        "method": "i-injected-it"
+    }
+]
