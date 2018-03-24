@@ -162,7 +162,14 @@
 
     <button id="update-filters-button" type="button">Update Map</button>
 
-    <div id="map"></div>
+    <div style="position: relative">
+      <div id="map"></div>
+      <div id="hover-details" style="position: absolute; top: 10px; left: 10px; z-index: 99; display: none">
+          <h1>TEST</h1>
+          <div id="hover-details-title"></div>
+          <div id="hover-details-content"></div>
+        </div>
+    </div>
     <script>
       var mapStyles = [
         {
@@ -236,7 +243,7 @@
         }
       ];
 
-      var hoverInfo, map, markers, fentanylSourceData, naloxoneSourceData;
+      var map, markers, fentanylSourceData, naloxoneSourceData;
 
       var fentanylFilterInputs = {
         drugType: [
@@ -460,24 +467,13 @@
           var result = zipCodeHash[featureZip];
           var reports = result ? result.reports : 0;
 
-          hoverInfo = new google.maps.InfoWindow({
-            position: event.latLng,
-            content: 'Zip: ' + event.feature.getProperty('ZCTA5CE10') + ', Reports: ' + reports
-          });
-
-          hoverInfo.setMap(map);
+          // set hover details
+          document.getElementById('hover-details').style.display = 'block';
         });
 
         map.data.addListener('mouseout', function(event) {
-          hoverInfo.setMap(null);
-          hoverInfo = null;
           map.data.revertStyle();
-        });
-
-        map.data.addListener('mousemove', function(event) {
-          if(hoverInfo) {
-            hoverInfo.setPosition(event.latLng);
-          }
+          document.getElementById('hover-details').style.display = 'none';
         });
       }
 
@@ -504,7 +500,9 @@
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 7,
           center: {lat: 42.007730, lng: -93.505678},
-          styles: mapStyles
+          styles: mapStyles,
+          streetViewControl: false,
+          mapTypeControl: false
         });
 
         map.data.loadGeoJson('ia-iowa-zip-codes-geo.min.json');
