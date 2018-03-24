@@ -100,11 +100,70 @@
     <input id="fentanyl-under30-no" type="checkbox" value="no" />  
     <label for="fentanyl-under30-no">No</label><br/>
 
+
+    <h3>Naloxone Filters</h3>
+    <p>Date of Testing</p>
+    <span>From: <input id="naloxone-startdate" type="date" /></span>
+    <span>To: <input id="naloxone-enddate" type="date" /></span>
+    
+    <p>Administration Type</p>
+    <input id="naloxone-admintype-injection" type="checkbox" value="Intermuscular Injection" />
+    <label for="naloxone-admintype-injection">Intermuscular Injection</label><br/>
+
+    <input id="naloxone-admintype-auto" type="checkbox" value="Auto-Injector" />
+    <label for="naloxone-admintype-auto">Auto-Injector</label><br/>
+
+    <input id="naloxone-admintype-spray" type="checkbox" value="Nasal Spray" />
+    <label for="naloxone-admintype-spray">Nasal Spray</label><br/>
+
+    
+    <p>Drug Type</p>
+    <input id="naloxone-drugtype-meth" type="checkbox" value="methamphetamine" />
+    <label for="naloxone-drugtype-meth">Methamphetamine</label><br/>
+
+    <input id="naloxone-drugtype-heroin" type="checkbox" value="heroin" />
+    <label for="naloxone-drugtype-heroin">Heroin</label><br/>
+
+    <input id="naloxone-drugtype-opioids" type="checkbox" value="opioids-prescription-pills" />
+    <label for="naloxone-drugtype-opioids">Opioids or Prescription Pills</label><br/>
+
+    <input id="naloxone-drugtype-crack" type="checkbox" value="crack-cocaine" />
+    <label for="naloxone-drugtype-crack">Crack/Cocaine</label><br/>
+
+    <input id="naloxone-drugtype-other" type="checkbox" value="other-not-listed" />
+    <label for="naloxone-drugtype-other">Other not on the list</label><br/>
+    
+    <p>Source</p>
+    <input id="naloxone-source-ihrc" type="checkbox" value="IHRC" />
+    <label for="naloxone-source-ihrc">Iowa Harm Reduction Coalition</label><br/>
+
+    <input id="naloxone-source-emergency" type="checkbox" value="Emergency Medical Provider" />
+    <label for="naloxone-source-emergency">Emergency Medical Provider</label><br/>
+
+    <input id="naloxone-source-law" type="checkbox" value="Law Enforcement" />
+    <label for="naloxone-source-law">Law Enforcement</label><br/>
+
+    <input id="naloxone-source-substance" type="checkbox" value="Substance Use Disorder Treatment" />
+    <label for="naloxone-source-substance">Substance Use Disorder Treatment</label><br/>
+
+    <input id="naloxone-source-pharmacy" type="checkbox" value="Pharmacy" />
+    <label for="naloxone-source-pharmacy">Pharmacy</label><br/>
+
+    <input id="naloxone-source-other" type="checkbox" value="Other" />
+    <label for="naloxone-source-other">Other</label><br/>
+
+    <p>Under 30</p>
+    <input id="naloxone-under30-yes" type="checkbox" value="yes" />
+    <label for="naloxone-under30-yes">Yes</label><br/>
+    
+    <input id="naloxone-under30-no" type="checkbox" value="no" />  
+    <label for="naloxone-under30-no">No</label><br/>
+
+
     <button id="update-filters-button" type="button">Update Map</button>
 
     <div id="map"></div>
     <script>
-      // map styles
       var mapStyles = [
         {
           "featureType": "administrative",
@@ -177,7 +236,7 @@
         }
       ];
 
-      var hoverInfo, map, fentanylSourceData, naloxoneSourceData;
+      var hoverInfo, map, markers, fentanylSourceData, naloxoneSourceData;
 
       var fentanylFilterInputs = {
         drugType: [
@@ -220,7 +279,34 @@
         ]
       };
 
-      function applyFilters() {
+      var naloxoneFilterInputs = {
+        administrationType: [
+          'naloxone-admintype-injection',
+          'naloxone-admintype-auto',
+          'naloxone-admintype-spray'
+        ],
+        drugType: [
+          'naloxone-drugtype-meth',
+          'naloxone-drugtype-opioids',
+          'naloxone-drugtype-heroin',
+          'naloxone-drugtype-crack',
+          'naloxone-drugtype-other'
+        ],
+        source: [
+          'naloxone-source-ihrc',
+          'naloxone-source-emergency',
+          'naloxone-source-law',
+          'naloxone-source-substance',
+          'naloxone-source-pharmacy',
+          'naloxone-source-other'
+        ],
+        under30: [
+          'fentanyl-under30-yes',
+          'fentanyl-under30-no'
+        ]
+      };
+
+      function applyFentanylFilters() {
         var fentanylFilters = getFilterValues(fentanylFilterInputs);
 
         var startDate = document.getElementById('fentanyl-startdate').value;
@@ -231,11 +317,34 @@
 
         let recordFilter = new RecordFilter(fentanylSourceData);
         setupFentanylFilters(fentanylFilters, recordFilter);
-        
+
         var filteredData = recordFilter.applyFilters();
         var filteredFentanylZipCodeHash = transformResultsToZipCodeHash(filteredData);
 
         initializeZipCodeMapData(filteredFentanylZipCodeHash);
+      }
+
+      function applyNaloxoneFilters() {
+        var naloxoneFilters = getFilterValues(naloxoneFilterInputs);
+
+        var startDate = document.getElementById('naloxone-startdate').value;
+        var endDate = document.getElementById('naloxone-enddate').value;
+
+        naloxoneFilters.startDate = startDate ? startDate : undefined;
+        naloxoneFilters.endDate = endDate ? endDate : undefined;
+
+        let recordFilter = new RecordFilter(fentanylSourceData);
+        setupFentanylFilters(naloxoneFilters, recordFilter);
+
+        var filteredData = recordFilter.applyFilters();
+
+        clearMarkers();
+        initializeMarkerClusterData(filteredData);
+      }
+
+      function applyFilters() {
+        applyFentanylFilters();
+        applyNaloxoneFilters();
       }
 
       function getFilterValues(filterInputs) {
@@ -260,7 +369,8 @@
           .then(response => {
             return response.json();
         }).then((responseJson) => {
-          initializeMarkerClusterData(responseJson);
+          naloxoneSourceData = responseJson;
+          initializeMarkerClusterData(naloxoneSourceData);
         });
       }
 
@@ -371,8 +481,15 @@
         });
       }
 
+      function clearMarkers() {
+        markers.forEach(marker => {
+          marker.setMap(null);
+        });
+        markers = [];
+      }
+
       function initializeMarkerClusterData(results) {
-        var markers = results.map(result => {
+        markers = results.map(result => {
           return new google.maps.Marker({
             position: {lat: Number(result.latitude), lng: Number(result.longitude)},
             label: result.zip
