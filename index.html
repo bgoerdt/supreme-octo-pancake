@@ -164,8 +164,7 @@
 
     <div style="position: relative">
       <div id="map"></div>
-      <div id="hover-details" style="position: absolute; top: 10px; left: 10px; z-index: 99; display: none">
-          <h1>TEST</h1>
+      <div id="hover-details" style="position: absolute; top: 10px; left: 10px; z-index: 99; display: none; background-color: white; border-color: gray; border-radius: 4px; padding: 16px;">
           <div id="hover-details-title"></div>
           <div id="hover-details-content"></div>
         </div>
@@ -393,9 +392,21 @@
       }
 
       function getHeatMapColor(min, max, value) {
-        var lightness = (1 - (((value / (max - min)) * 0.5) + 0.3)) * 100;
+        console.log('min', min);
+        console.log('max', max);
+        console.log('value', value);
 
-        return 'hsl(0, 85%, ' + lightness + '%)';
+        var valuePercent = (value - min) / (max - min);
+
+        console.log(valuePercent);
+
+        var lightness = ((1 - ((valuePercent) * 0.5)) - 0.2) * 100;
+
+        var hsl = 'hsl(0, 85%, ' + lightness + '%)';
+
+        console.log(hsl);
+
+        return hsl;
       }
 
       function transformResultsToZipCodeHash(resultsResponse) {
@@ -468,6 +479,8 @@
           var reports = result ? result.reports : 0;
 
           // set hover details
+          document.getElementById('hover-details-title').textContent = 'Zip: ' + featureZip;
+          document.getElementById('hover-details-content').textContent = 'Reports: ' + reports;
           document.getElementById('hover-details').style.display = 'block';
         });
 
@@ -488,7 +501,7 @@
         markers = results.map(result => {
           return new google.maps.Marker({
             position: {lat: Number(result.latitude), lng: Number(result.longitude)},
-            label: result.zip
+            //label: result.zip
           });
         });
 
