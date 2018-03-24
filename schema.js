@@ -32,8 +32,7 @@ var fentanyl = {
     startDate: new Date(),
     endDate: new Date(),
     drugType: [
-        'Choose Drug', // probably shouldn't be here
-        'Opioids',
+        'Choose Drug', // probably shouldn't be heres
         'Methamphetamine',
         'Opioids',
         'Heroin',
