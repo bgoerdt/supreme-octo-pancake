@@ -169,6 +169,12 @@
           <div id="hover-details-content"></div>
         </div>
     </div>
+    <div style="position: absolute; top: 10px; left: 10px; z-index: 99; display: none; background-color: white; border-color: gray; border-radius: 4px; padding: 16px;">
+      <label>Legend</label>
+      <div>10</div>
+      <div style="height: 120px; width: 16px; background: linear-gradient(hsl(0, 85%, 30%), hsl(0, 85%, 80%));"></div>
+      <div>2</div>
+    </div>
     <script>
       var mapStyles = [
         {
@@ -242,7 +248,7 @@
         }
       ];
 
-      var map, markers, fentanylSourceData, naloxoneSourceData;
+      var map, markers, fentanylSourceData, naloxoneSourceData, zipDataRange;
 
       var fentanylFilterInputs = {
         drugType: [
@@ -339,7 +345,7 @@
         naloxoneFilters.startDate = startDate ? startDate : undefined;
         naloxoneFilters.endDate = endDate ? endDate : undefined;
 
-        let recordFilter = new RecordFilter(fentanylSourceData);
+        let recordFilter = new RecordFilter(naloxoneSourceData);
         setupFentanylFilters(naloxoneFilters, recordFilter);
 
         var filteredData = recordFilter.applyFilters();
@@ -387,15 +393,12 @@
         }).then((responseJson) => {
           fentanylSourceData = responseJson;
           var fentanylZipCodeHash = transformResultsToZipCodeHash(fentanylSourceData);
+          zipDataRange = getResultsRange(fentanylZipCodeHash);
           initializeZipCodeMapData(fentanylZipCodeHash);
         });
       }
 
       function getHeatMapColor(min, max, value) {
-        console.log('min', min);
-        console.log('max', max);
-        console.log('value', value);
-
         var valuePercent = (value - min) / (max - min);
 
         // map value percent to lightness range of 30% to 80% (dark to light)
@@ -445,8 +448,6 @@
       }
 
       function initializeZipCodeMapData(zipCodeHash) {
-        var resultsRange = getResultsRange(zipCodeHash);
-        
         map.data.setStyle(function(feature) {
           var styleOptions = {
             fillOpacity: 0,
@@ -458,7 +459,7 @@
           var result = zipCodeHash[featureZip];
           if (result) {
             styleOptions.fillOpacity = 0.7;
-            styleOptions.fillColor = getHeatMapColor(resultsRange.min, resultsRange.max, result.reports);
+            styleOptions.fillColor = getHeatMapColor(zipDataRange.min, zipDataRange.max, result.reports);
           }
 
           return styleOptions;
