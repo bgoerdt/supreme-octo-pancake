@@ -398,15 +398,10 @@
 
         var valuePercent = (value - min) / (max - min);
 
-        console.log(valuePercent);
-
+        // map value percent to lightness range of 30% to 80% (dark to light)
         var lightness = ((1 - ((valuePercent) * 0.5)) - 0.2) * 100;
 
-        var hsl = 'hsl(0, 85%, ' + lightness + '%)';
-
-        console.log(hsl);
-
-        return hsl;
+        return 'hsl(0, 85%, ' + lightness + '%)';
       }
 
       function transformResultsToZipCodeHash(resultsResponse) {
