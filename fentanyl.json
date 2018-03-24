@@ -1,12 +1,362 @@
 [
     {
         "date": "03/23/2018",
-        "zip": "50324",
-        "result": "Methamphetamine",
+        "drugType": "Methamphetamine",
+        "result": "Positive",
         "beforeOrAfter": "After drug use",
-        "actions": "a:1:{i:0;s:44:\"i-used-the-same-amount-of-drugs-as-i-planned\";}",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-injected-it"
+    },
+    {
+        "date": "03/23/2018",
+        "drugType": "Methamphetamine",
+        "result": "Negative",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-injected-it"
+    },
+    {
+        "date": "03/23/2018",
+        "drugType": "Heroin",
+        "result": "Negative",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-snorted-or-sniffed-it"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Methamphetamine",
+        "result": "Negative",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned",
+            "i-used-less-amount-of-drugs-than-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-injected-it",
+        "zip": "50131",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Crack/Cocaine",
+        "result": "Negative",
+        "beforeOrAfter": "After drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-snorted-or-sniffed-it",
+        "zip": "52333",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Positive",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-smoked-it",
+        "zip": "50010",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Methamphetamine",
+        "result": "Negative",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-threw-the-drugs-away"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-snorted-or-sniffed-it",
+        "zip": "52240",
+        "under30": "no"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Methamphetamine",
+        "result": "Positive",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-injected-it",
+        "zip": "52240",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Negative",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-smoked-it",
+        "zip": "52440",
+        "under30": "no"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Negative",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-less-amount-of-drugs-than-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-injected-it",
+        "zip": "50623",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Negative",
+        "beforeOrAfter": "After drug use",
+        "actions": [
+            "i-pushed-plunger-partway-to-feel-how-strong-the-drug-was"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-snorted-or-sniffed-it",
+        "zip": "42440",
+        "under30": "no"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Methamphetamine",
+        "result": "Positive",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-snorted-or-sniffed-it",
+        "zip": "50010",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Methamphetamine",
+        "result": "Positive",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "",
+        "longitude": "",
+        "method": "i-injected-it",
+        "zip": "12345",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Methamphetamine",
+        "result": "Positive",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
         "latitude": "41.6038268",
         "longitude": "-93.7105118",
-        "method": "i-injected-it"
+        "method": "i-injected-it",
+        "zip": "50324",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Negative",
+        "beforeOrAfter": "After drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "41.632449",
+        "longitude": "-93.6724649",
+        "method": "i-snorted-or-sniffed-it",
+        "zip": "50310",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Heroin",
+        "result": "Negative",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-pushed-plunger-more-slowly-than-usual"
+        ],
+        "latitude": "41.6893951",
+        "longitude": "-94.5830789",
+        "method": "i-snorted-or-sniffed-it",
+        "zip": "50115",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Positive",
+        "beforeOrAfter": "After drug use",
+        "actions": [
+            "other-not-on-the-list"
+        ],
+        "latitude": "41.632449",
+        "longitude": "-93.6724649",
+        "method": "i-injected-it",
+        "zip": "50310",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Negative",
+        "beforeOrAfter": "After drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned",
+            "i-got-someone-to-look-after-me"
+        ],
+        "latitude": "41.799919",
+        "longitude": "-93.7232005",
+        "method": "i-smoked-it",
+        "zip": "50226",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Positive",
+        "beforeOrAfter": "After drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned",
+            "i-used-less-amount-of-drugs-than-i-planned"
+        ],
+        "latitude": "42.0320531",
+        "longitude": "-93.5913939",
+        "method": "i-injected-it",
+        "zip": "50010",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Crack/Cocaine",
+        "result": "Positive",
+        "beforeOrAfter": "After drug use",
+        "actions": [
+            "i-got-someone-to-look-after-me",
+            "i-shared-the-test-results-with-other-people-who-use-the-same-drug"
+        ],
+        "latitude": "41.6143311",
+        "longitude": "-94.2025859",
+        "method": "i-snorted-or-sniffed-it",
+        "zip": "50233",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Didn’t work",
+        "beforeOrAfter": "After drug use",
+        "actions": [
+            "i-got-someone-to-look-after-me"
+        ],
+        "latitude": "42.6848605",
+        "longitude": "-93.1177555",
+        "method": "i-injected-it",
+        "zip": "50633",
+        "under30": "yes"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Positive",
+        "beforeOrAfter": "Before drug use",
+        "actions": [],
+        "latitude": "42.4056193",
+        "longitude": "-91.3469247",
+        "method": "i-smoked-it",
+        "zip": "52223",
+        "under30": "no"
+    },
+    {
+        "date": "Friday, March 23 2018",
+        "drugType": "Opioids",
+        "result": "Positive",
+        "beforeOrAfter": "After drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "44.1791387",
+        "longitude": "-92.6586401",
+        "method": "other-not-listed",
+        "zip": "55963",
+        "under30": "no"
+    },
+    {
+        "date": "Saturday, March 24 2018",
+        "drugType": "Choose Drug",
+        "result": "Positive",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "41.6113703",
+        "longitude": "-91.5015009",
+        "method": "i-injected-it",
+        "zip": "52240",
+        "under30": "yes"
+    },
+    {
+        "date": "Saturday, March 24 2018",
+        "drugType": "Methamphetamine",
+        "result": "Positive",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "41.68061",
+        "longitude": "-93.7232005",
+        "method": "i-injected-it",
+        "zip": "50131",
+        "under30": "yes"
+    },
+    {
+        "date": "Saturday, March 24 2018",
+        "drugType": "Methamphetamine",
+        "result": "Positive",
+        "beforeOrAfter": "Before drug use",
+        "actions": [
+            "i-used-the-same-amount-of-drugs-as-i-planned"
+        ],
+        "latitude": "42.6718614",
+        "longitude": "-91.9294681",
+        "method": "i-injected-it",
+        "zip": "50662",
+        "under30": "yes"
     }
 ]
