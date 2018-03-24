@@ -1,0 +1,2105 @@
+{
+    "settings": {
+        "objectType": "Form Setting",
+        "editActive": "1",
+        "title": "Fentanyl Testing Report",
+        "show_title": "0",
+        "clear_complete": "1",
+        "hide_complete": "1",
+        "default_label_pos": "above",
+        "wrapper_class": "",
+        "element_class": "",
+        "key": "",
+        "add_submit": "1",
+        "currency": "",
+        "unique_field_error": "A form with this value has already been submitted.",
+        "logged_in": "",
+        "not_logged_in_msg": "",
+        "sub_limit_msg": "The form has reached its submission limit.",
+        "calculations": [],
+        "formContentData": [
+            "what_kind_of_drugs_did_you_test_1521820746502",
+            "when_did_you_use_the_test_strip_1521820966738",
+            "what_was_the_result_of_the_test_1521820855516",
+            "what_did_you_do_after_finding_out_the_test_results_choose_all_that_apply_1521822409624",
+            "what_method_did_you_use_to_ingest_your_drugs_1521827344001",
+            "when_did_you_take_the_test_1521828371014",
+            "are_you_age_30_or_younger_1521833177906",
+            "zip_code_1521833110170",
+            "recaptcha_1521839007128",
+            "submit_1521819722468",
+            "latitude",
+            "longitude"
+        ],
+        "drawerDisabled": ""
+    },
+    "fields": [
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "1",
+            "label": "What kind of drugs did you test?",
+            "type": "listselect",
+            "key": "what_kind_of_drugs_did_you_test_1521820746502",
+            "label_pos": "default",
+            "required": "1",
+            "options": [
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "0",
+                    "new": "",
+                    "options": [],
+                    "label": "Choose Drug",
+                    "value": "Choose Drug",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "Methamphetamine",
+                    "value": "Methamphetamine",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "1",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "Opioids (prescription pills)",
+                    "value": "Opioids",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "2",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "Heroin",
+                    "value": "Heroin",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "3",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "4",
+                    "new": "",
+                    "options": [],
+                    "label": "Crack\/Cocaine",
+                    "value": "Crack\/Cocaine",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "5",
+                    "new": "",
+                    "options": [],
+                    "label": "Other not listed",
+                    "value": "Other not on the list",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                }
+            ],
+            "container_class": "",
+            "element_class": "",
+            "admin_label": "",
+            "help_text": "",
+            "drawerDisabled": ""
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "2",
+            "label": "When did you use the test strip?",
+            "type": "listradio",
+            "key": "when_did_you_use_the_test_strip_1521820966738",
+            "label_pos": "default",
+            "required": "1",
+            "options": [
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "Before using the drug",
+                    "value": "Before drug use",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "After using the drug",
+                    "value": "After drug use",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "1",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                }
+            ],
+            "container_class": "",
+            "element_class": "",
+            "admin_label": "",
+            "help_text": ""
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "3",
+            "label": "What was the result of the test?",
+            "type": "listselect",
+            "key": "what_was_the_result_of_the_test_1521820855516",
+            "label_pos": "default",
+            "required": "1",
+            "options": [
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "0",
+                    "new": "",
+                    "options": [],
+                    "label": "Choose Result",
+                    "value": "choose-result",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "Positive ( 1 Line )",
+                    "value": "Positive",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "1",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "Negative ( 2 Lines)",
+                    "value": "Negative",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "2",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "Didn\u00e2\u0080\u0099t work (no lines)",
+                    "value": "Didn\u00e2\u0080\u0099t work",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "3",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                }
+            ],
+            "container_class": "",
+            "element_class": "",
+            "admin_label": "",
+            "help_text": "",
+            "drawerDisabled": ""
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "4",
+            "label": "What did you do after finding out the test results? (Choose all that apply)",
+            "type": "listcheckbox",
+            "key": "what_did_you_do_after_finding_out_the_test_results_choose_all_that_apply_1521822409624",
+            "label_pos": "default",
+            "required": "",
+            "options": [
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "I used the same amount of drugs as I planned",
+                    "value": "i-used-the-same-amount-of-drugs-as-i-planned",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "1",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "I used less amount of drugs than I planned",
+                    "value": "i-used-less-amount-of-drugs-than-i-planned",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "2",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "I pushed plunger more slowly than usual",
+                    "value": "i-pushed-plunger-more-slowly-than-usual",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "3",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "4",
+                    "new": "",
+                    "options": [],
+                    "label": "I pushed plunger partway to feel how strong the drug was",
+                    "value": "i-pushed-plunger-partway-to-feel-how-strong-the-drug-was",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "5",
+                    "new": "",
+                    "options": [],
+                    "label": "I sniffed it instead of shooting",
+                    "value": "i-sniffed-it-instead-of-shooting",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "6",
+                    "new": "",
+                    "options": [],
+                    "label": "I threw the drugs away",
+                    "value": "i-threw-the-drugs-away",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "7",
+                    "new": "",
+                    "options": [],
+                    "label": "I got someone to look after me",
+                    "value": "i-got-someone-to-look-after-me",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "8",
+                    "new": "",
+                    "options": [],
+                    "label": "I shared the test results with other people who use the same drug",
+                    "value": "i-shared-the-test-results-with-other-people-who-use-the-same-drug",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "9",
+                    "new": "",
+                    "options": [],
+                    "label": "Other not on the list",
+                    "value": "other-not-on-the-list",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                }
+            ],
+            "container_class": "",
+            "element_class": "",
+            "admin_label": "",
+            "help_text": "",
+            "drawerDisabled": ""
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "5",
+            "label": "What method did you use to ingest your drugs?",
+            "type": "listselect",
+            "key": "what_method_did_you_use_to_ingest_your_drugs_1521827344001",
+            "label_pos": "default",
+            "required": "",
+            "options": [
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "0",
+                    "new": "",
+                    "options": [],
+                    "label": "Choose Method",
+                    "value": "Choose Method",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "I injected it",
+                    "value": "i-injected-it",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "1",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "I snorted or sniffed it",
+                    "value": "i-snorted-or-sniffed-it",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "2",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "I smoked it",
+                    "value": "i-smoked-it",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "3",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "4",
+                    "new": "",
+                    "options": [],
+                    "label": "I didn\u00e2\u0080\u0099t use it",
+                    "value": "i-didn-t-use-it",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "order": "5",
+                    "new": "",
+                    "options": [],
+                    "label": "Other not listed",
+                    "value": "other-not-listed",
+                    "calc": "",
+                    "selected": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    }
+                }
+            ],
+            "container_class": "",
+            "element_class": "",
+            "admin_label": "",
+            "help_text": "",
+            "drawerDisabled": ""
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "6",
+            "label": "When did you take the test?",
+            "type": "date",
+            "key": "when_did_you_take_the_test_1521828371014",
+            "label_pos": "default",
+            "required": "1",
+            "placeholder": "",
+            "container_class": "",
+            "element_class": "",
+            "manual_key": "",
+            "admin_label": "",
+            "help_text": "",
+            "date_default": "1",
+            "date_format": "dddd, MMMM D YYYY",
+            "year_range_start": "",
+            "year_range_end": "",
+            "drawerDisabled": ""
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "7",
+            "label": "Are you age 30 or younger?",
+            "type": "listradio",
+            "key": "are_you_age_30_or_younger_1521833177906",
+            "label_pos": "default",
+            "required": "",
+            "options": [
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "Yes",
+                    "value": "yes",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "0",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                },
+                {
+                    "errors": [],
+                    "max_options": "0",
+                    "label": "No",
+                    "value": "no",
+                    "calc": "",
+                    "selected": "0",
+                    "order": "1",
+                    "settingModel": {
+                        "settings": "",
+                        "hide_merge_tags": "",
+                        "error": "",
+                        "name": "options",
+                        "type": "option-repeater",
+                        "label": "Options <a href=\"#\" class=\"nf-add-new\">Add New<\/a> <a href=\"#\" class=\"extra nf-open-import-tooltip\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"><\/i> Import<\/a>",
+                        "width": "full",
+                        "group": "",
+                        "value": [
+                            {
+                                "label": "One",
+                                "value": "one",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "0"
+                            },
+                            {
+                                "label": "Two",
+                                "value": "two",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "1"
+                            },
+                            {
+                                "label": "Three",
+                                "value": "three",
+                                "calc": "",
+                                "selected": "0",
+                                "order": "2"
+                            }
+                        ],
+                        "columns": {
+                            "label": {
+                                "header": "Label",
+                                "default": ""
+                            },
+                            "value": {
+                                "header": "Value",
+                                "default": ""
+                            },
+                            "calc": {
+                                "header": "Calc Value",
+                                "default": ""
+                            },
+                            "selected": {
+                                "header": "<span class=\"dashicons dashicons-yes\"><\/span>",
+                                "default": "0"
+                            }
+                        }
+                    },
+                    "manual_value": "1"
+                }
+            ],
+            "container_class": "",
+            "element_class": "",
+            "admin_label": "",
+            "help_text": "",
+            "drawerDisabled": ""
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "8",
+            "label": "Zip Code",
+            "type": "zip",
+            "key": "zip_code_1521833110170",
+            "label_pos": "default",
+            "required": "1",
+            "default": "",
+            "placeholder": "",
+            "container_class": "",
+            "element_class": "",
+            "input_limit": "5",
+            "input_limit_type": "characters",
+            "input_limit_msg": "Character(s) left",
+            "manual_key": "",
+            "admin_label": "",
+            "help_text": "",
+            "mask": "",
+            "custom_mask": "",
+            "drawerDisabled": "",
+            "disable_browser_autocomplete": "1"
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "9",
+            "label": "Recaptcha",
+            "type": "recaptcha",
+            "container_class": "",
+            "element_class": "",
+            "size": "visible",
+            "key": "recaptcha_1521839007128",
+            "drawerDisabled": ""
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "10",
+            "type": "submit",
+            "label": "Submit",
+            "processing_label": "Processing",
+            "container_class": "",
+            "element_class": "",
+            "key": "submit_1521819722468"
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "11",
+            "label": "Latitude",
+            "type": "hidden",
+            "key": "latitude",
+            "default": "",
+            "admin_label": "",
+            "manual_key": "1",
+            "drawerDisabled": ""
+        },
+        {
+            "objectType": "Field",
+            "objectDomain": "fields",
+            "editActive": "",
+            "order": "12",
+            "label": "Longitude",
+            "type": "hidden",
+            "key": "longitude",
+            "default": "",
+            "admin_label": "",
+            "manual_key": "1",
+            "drawerDisabled": ""
+        }
+    ],
+    "actions": [
+        {
+            "title": "",
+            "key": "",
+            "type": "save",
+            "active": "1",
+            "created_at": "2018-03-23 10:42:04",
+            "objectType": "Action",
+            "objectDomain": "actions",
+            "editActive": "",
+            "label": "Store Submission",
+            "order": "3",
+            "payment_gateways": "",
+            "payment_total": "0",
+            "tag": "",
+            "to": "{wp:admin_email}",
+            "reply_to": "",
+            "email_subject": "Ninja Forms Submission",
+            "email_message": "{fields_table}",
+            "email_message_plain": "",
+            "from_name": "",
+            "from_address": "",
+            "email_format": "html",
+            "cc": "",
+            "bcc": "",
+            "redirect_url": "",
+            "drawerDisabled": ""
+        },
+        {
+            "title": "",
+            "key": "",
+            "type": "email",
+            "active": "1",
+            "created_at": "2018-03-23 10:42:04",
+            "objectType": "Action",
+            "objectDomain": "actions",
+            "editActive": "",
+            "label": "Admin Email",
+            "order": "2",
+            "payment_gateways": "",
+            "payment_total": "0",
+            "tag": "",
+            "to": "{wp:admin_email}",
+            "reply_to": "",
+            "email_subject": "Ninja Forms Submission",
+            "email_message": "{fields_table}",
+            "email_message_plain": "",
+            "from_name": "",
+            "from_address": "",
+            "email_format": "html",
+            "cc": "",
+            "bcc": ""
+        },
+        {
+            "title": "",
+            "key": "",
+            "type": "successmessage",
+            "active": "1",
+            "created_at": "2018-03-23 10:42:04",
+            "objectType": "Action",
+            "objectDomain": "actions",
+            "editActive": "",
+            "label": "Success Message",
+            "message": "Your form has been successfully submitted.",
+            "order": "1",
+            "payment_gateways": "",
+            "payment_total": "0",
+            "tag": "",
+            "to": "{wp:admin_email}",
+            "reply_to": "",
+            "email_subject": "Ninja Forms Submission",
+            "email_message": "{fields_table}",
+            "email_message_plain": "",
+            "from_name": "",
+            "from_address": "",
+            "email_format": "html",
+            "cc": "",
+            "bcc": "",
+            "redirect_url": "",
+            "success_msg": "Your form has been successfully submitted."
+        }
+    ]
+}
