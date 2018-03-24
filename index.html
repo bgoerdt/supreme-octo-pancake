@@ -179,20 +179,6 @@
 
       var hoverInfo, map, fentanylSourceData, naloxoneSourceData;
 
-/*
-
-    <input id="fentanyl-results-positive" type="checkbox" value="Positive" />
-    <label for="fentanyl-results-positive">Positive</label><br/>
-
-    <input id="fentanyl-results-negative" type="checkbox" value="Negative" />
-    <label for="fentanyl-results-negative">Negative</label><br/>
-
-    <input id="fentanyl-results-none" type="checkbox" value="Didn\u00e2\u0080\u0099t work" />
-    <label for="fentanyl-results-none">Didn't work</label><br/>
-
-
-*/
-
       var fentanylFilterInputs = {
         drugType: [
           'fentanyl-drugtype-meth',
@@ -209,20 +195,46 @@
           'fentanyl-results-positive',
           'fentanyl-results-negative',
           'fentanyl-results-none'
+        ],
+        actions: [
+          'fentanyl-actions-sameamount',
+          'fentanyl-actions-less',
+          'fentanyl-actions-slowplunger',
+          'fentanyl-actions-plungerpartway',
+          'fentanyl-actions-sniffed',
+          'fentanyl-actions-threwaway',
+          'fentanyl-actions-lookafter',
+          'fentanyl-actions-sharedresults',
+          'fentanyl-actions-other'
+        ],
+        method: [
+          'fentanyl-method-inject',
+          'fentanyl-method-snorted',
+          'fentanyl-method-smoked',
+          'fentanyl-method-didnotuse',
+          'fentanyl-method-other'
+        ],
+        under30: [
+          'fentanyl-under30-yes',
+          'fentanyl-under30-no'
         ]
       };
 
       function applyFilters() {
         var fentanylFilters = getFilterValues(fentanylFilterInputs);
 
-        fentanylFilters.startDate = document.getElementById('fentanyl-startdate').value;
-        fentanylFilters.endDate = document.getElementById('fentanyl-enddate').value;
+        var startDate = document.getElementById('fentanyl-startdate').value;
+        var endDate = document.getElementById('fentanyl-enddate').value;
+
+        fentanylFilters.startDate = startDate ? startDate : undefined;
+        fentanylFilters.endDate = endDate ? endDate : undefined;
 
         let recordFilter = new RecordFilter(fentanylSourceData);
-        setupFentanylFilters(fentanylFilters,recordFilter);
+        setupFentanylFilters(fentanylFilters, recordFilter);
         
         var filteredData = recordFilter.applyFilters();
         var filteredFentanylZipCodeHash = transformResultsToZipCodeHash(filteredData);
+
         initializeZipCodeMapData(filteredFentanylZipCodeHash);
       }
 
@@ -284,6 +296,13 @@
       }
 
       function getResultsRange(zipCodeHash) {
+        if (Object.keys(zipCodeHash).length === 0) {
+          return {
+            min: 0,
+            max: 0
+          };
+        }
+
         var firstResult = zipCodeHash[Object.keys(zipCodeHash)[0]];
         var initialRange = {
           min: firstResult.reports,
